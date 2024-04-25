@@ -26,13 +26,14 @@ import {
 
 
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
-  measurementId: ""
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -62,7 +63,7 @@ const navigate = useNavigate();
 const [userId, setUserId] = useState('');
  const [isChatbotTyping, setIsChatbotTyping] = useState(false);
  const [conversationId, setConversationId] = useState(id); // State to store conversation ID
- const openai = new OpenAI({ apiKey: '', dangerouslyAllowBrowser: true });
+ const openai = new OpenAI({ apiKey: process.env.REACT_APP_OPENAI_API_KEY, dangerouslyAllowBrowser: true });
 //  setConversationId(id);
 
  // State to store chat messages
@@ -174,7 +175,7 @@ const [userId, setUserId] = useState('');
    };
 
    // Send the user message to the Flask backend
-  const response = await fetch('http://127.0.0.1:5000/compare_message', {
+  const response = await fetch(process.env.REACT_APP_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
