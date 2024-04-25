@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -11,7 +11,7 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -35,4 +35,83 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+div .cs-message-input__content-editor,
+div .cs-message-input__content-editor-wrapper,
+div .cs-message-list,
+div .ps__rail-y:hover,
+div .ps .ps__rail-y:hover,
+div .ps__rail-y {
+background-color: #ebebeb;
+}
+
+div .cs-message--outgoing .cs-message__content {
+  background-color: #c4fcc4;
+}
+
+div .cs-message--incoming .cs-message__content {
+  background-color: #a5e5f9;
+  /* width: 300px; */
+
+}
+
+div .cs-message__avatar{
+  width: 3vh;
+}
+
+#parent {
+  display: flex;
+  height: 100%; /* Make the parent container fill the viewport height */
+}
+
+#profile {
+  flex: 0 0 auto; /* Don't allow the profile section to grow or shrink */
+  width: 200px; /* Set a fixed width for the profile section */
+  padding: 10px;
+  background-color: #e3f5df;
+}
+
+#chatcontainer {
+  flex: 1; /* Allow the chat container to grow and fill the remaining space */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure the chat container spans the entire height */
+  background-color: #e3f5df;
+}
+
+#chat {
+  flex: 1; /* Make the chat container fill the remaining height */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  padding: 20px;
+  height: 100%; /* Ensure the chat container spans the entire height */
+  background-color: #e3f5df;
+}
+
+
+/* html,body {
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+  height: 100%;
+} */
+
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #18c23a; /* Blue background color */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.custom-button:hover {
+  background-color: #26ef29; /* Darker blue on hover */
 }

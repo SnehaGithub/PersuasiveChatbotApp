@@ -13,7 +13,7 @@ openai.api_key = api_key
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = ''
+app.config['SECRET_KEY'] = 'insert secret key here'
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 cors = CORS(app, resources={r"/compare_message": {"origins": "http://localhost:3000"}})
@@ -50,7 +50,7 @@ def compare_message(message):
         # text_embedding = model.encode([text])[0]
         # similarity = cosine_similarity([message_embedding], [text_embedding])[0][0]
         similarity = compute_similarity(text, message)
-        if similarity > 0.65:
+        if similarity > 0.8:
             print("Similarity SCORE: ", similarity)
             return refs[i] #para_refs[i]
     return None
