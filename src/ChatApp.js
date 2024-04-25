@@ -176,6 +176,7 @@ const [userId, setUserId] = useState('');
 
    // Send the user message to the Flask backend
   const response = await fetch(process.env.REACT_APP_API_URL, {
+    mode: 'no-cors',
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
