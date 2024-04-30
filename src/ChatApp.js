@@ -176,12 +176,15 @@ const [userId, setUserId] = useState('');
 
    // Send the user message to the Flask backend
   const response = await fetch(process.env.REACT_APP_API_URL, {
-    mode: 'no-cors',
+    mode: 'cors',
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ message: userMessage })
+    headers:{
+      'Content-type':'application/json', 
+      'Accept':'application/json'
+   },
+    body: JSON.stringify({ message: userMessage }),
+    json: JSON.stringify({ message: userMessage })
+
   });
 
   const responseData = await response.json();
@@ -304,7 +307,7 @@ const startNewConversation = () => {
         <p>Avatar Name</p>
         <p>Profile Description: I can share tips on nutrition, health & wellness.</p>
 
-        <button type="button" class="custom-button"  onClick={startNewConversation}>
+        <button type="button" className="custom-button"  onClick={startNewConversation}>
           <span>New Conversation</span>
         </button>
       </div>
