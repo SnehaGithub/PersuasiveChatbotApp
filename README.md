@@ -29,7 +29,7 @@ npm install openai
 npm install firebase
 
 ## API/Secret Keys
-You will need to add API keys for OpenAI as well as Firebase configuration in ChatApp.js and api.py.
+You will need to create a .env file for both the React app (OpenAI key as well as Firebase configuration) as well as the Flask app (OpenAI key and CORS secret).
 
 ## Exporting Data
 Go to Firebase console -> Realtime Database
@@ -38,7 +38,7 @@ On the right hand side there are three dots (expand menu) button. Click on it an
 Once you have the exported JSON file downloaded. Move it to the src directory. Then run the json_to_csv.py. Note that this script expects the name of the JSON file to be "export_json_to_firebase.json". You can either change the name in the script or change the name of the downloaded JSON file. Once the script has finished running, the output is called "output_firebase.csv"
 
 
-## Render Deploymeny
+## Render Deployment
 
 ### React Deployment on Render
 
