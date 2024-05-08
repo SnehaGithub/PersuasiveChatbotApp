@@ -11,7 +11,7 @@ Flask download; https://pypi.org/project/Flask/
 Please also install and setup Python if  you do not have it already.
 You can also just run npm install flask (may also have to run pip install -U Flask)
 
-###React: 
+### React: 
 
 After installing Node, just run npx create-react-app my-app
 
@@ -20,7 +20,7 @@ cd my-app
 
 Then replace the src in there with the src folder on this Github repo
 
-###Flask
+### Flask
 Create another virtual environment and a separate project structure.
 
 There is a requirements.txt on the persuasivebot_api Github Repo. Install that using pip.
