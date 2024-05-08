@@ -19,9 +19,13 @@ cd my-app
 Then replace the src in there with the src folder on this Github repo
 
 ## Additional Installations
+
 Run the following:
+
 npm install @chatscope/chat-ui-kit-react
+
 npm install openai
+
 npm install firebase
 
 ## API/Secret Keys
@@ -35,7 +39,8 @@ Once you have the exported JSON file downloaded. Move it to the src directory. T
 
 
 ## Render Deploymeny
-React Deployment on Render
+
+### React Deployment on Render
 
 The React application is deployed as a static site on Render. Render provides a straightforward process for deploying static sites:
 
@@ -44,7 +49,7 @@ Creating a Static Site: On Render, create a new "Static Site" and connect it to 
 Build Command: The build command for us is npm install && npm run build. This command generates the static assets required for deployment.
 Publish Directory: The publish directory is the path to the static assets. For React, this is usually the build directory.
 
-Flask Deployment on Render
+### Flask Deployment on Render
 
 Flask is deployed as a web service on Render. This requires configuring a few settings to ensure proper deployment:
 
